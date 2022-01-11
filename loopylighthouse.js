@@ -1,17 +1,12 @@
-// function expression catSays
-var catSays = function(max) {
-  var catMessage = "";
-  for (var i = 0; i < max; i++) {
-    catMessage += "meow ";
+for (let i = 100; i <= 200; i++) {
+  if (i % 3 === 0 && i % 4 === 0) {
+    console.log("LoopyLighthouse");
+  } else if (i % 4 === 0) {
+    console.log("Lighthouse");
+  } else if (i % 3 === 0) {
+    console.log("Loopy");
+  } else {
+    console.log(i);
   }
-  return catMessage;
-};
-
-// function declaration helloCat accepting a callback
-function helloCat(callbackFunc) {
-  return "Hello " + callbackFunc(3);
 }
 
-// pass in catSays as a callback function
-helloCat(catSays);
-console.log(helloCat(catSays))
